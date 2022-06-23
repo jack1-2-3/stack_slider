@@ -1,0 +1,36 @@
+.p-slider {
+  position: relative;
+  width: 800px;
+  margin: 50px auto;
+}
+
+.p-slider__item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 800px;
+  height: 500px;
+  overflow: hidden;
+}
+
+.p-slider__item:first-of-type {
+  z-index: 2;
+}
+
+.p-slider__item.is-shrink {
+  animation: shrinkItem 1s both;
+}
+
+.p-slider__item img {
+  min-width: 800px;
+  height: 100%;
+}
+
+@keyframes shrinkItem {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0;
+  }
+}
