@@ -10,9 +10,9 @@ function slider() {
   setInterval(startSlider, 2000)
 
   function startSlider() {
-    const activeItem = document.querySelector('.p-slider__item.is-shrink')
+    const activeItem = document.querySelector('.p-slider__item.is-active')
     if (activeItem) {
-      activeItem.classList.remove('is-shrink')
+      activeItem.classList.remove('is-active')
     }
 
     const frontViewCounter = counter
@@ -28,7 +28,7 @@ function slider() {
     sliderItems[frontViewCounter].style.zIndex = frontViewZIndex
     sliderItems[middleViewCounter].style.zIndex = middleViewZIndex
     
-    sliderItems[frontViewCounter].classList.add('is-shrink')
+    sliderItems[frontViewCounter].classList.add('is-active')
 
     counter++
     if (counter > sliderItems.length - 1) {

@@ -17,7 +17,7 @@
   z-index: 2;
 }
 
-.p-slider__item.is-shrink {
+.p-slider__item.is-active {
   animation: shrinkItem 1s both;
 }
 
